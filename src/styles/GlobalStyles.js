@@ -12,6 +12,8 @@ const GlobalStyles = createGlobalStyle`
   --color-notLove:#b6d3d8;
 
   --shadow:0px 0.6rem 2.4rem rgba(255, 255,255, 0.08);
+ --gradient : linear-gradient(to left, #8b8d8e, #e8e8e8);
+
   --color-grey-0: #fff;
   --color-grey-50: #f9fafb;
   --color-grey-100: #f3f4f6;
@@ -58,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
   --color-love:#021619;
   --color-notLove:#677375;
   --shadow:0px 0.6rem 2.4rem rgba(0, 0, 0, 0.3);
-
+ --gradient : linear-gradient(to right, #9fd7e0, #b7e1e8);
     --color-grey-0: #18212f;
 --color-grey-50: #111827;
 --color-grey-100: #1f2937;

@@ -13,6 +13,7 @@ import Favorites from "./pages/Favorites";
 import { ProductsModeProvider } from "./context/ProductsMode";
 import Account from "./pages/Account";
 import ProtectedRoute from "./ui/ProtectedRoute";
+import Product from "./pages/Product";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,6 +42,7 @@ const App = () => {
               >
                 <Route index element={<Navigate replace to="login" />} />
                 <Route path="home" element={<Home />} />
+                <Route path="home/:id" element={<Product />} />
                 <Route path="cart" element={<Cart />} />
                 <Route path="favorites" element={<Favorites />} />
                 <Route path="account" element={<Account />} />

@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useProductMode } from "../context/ProductsMode";
 import { useFavorites } from "../features/laptops/useFavorites";
 import { useCartLaptops } from "../features/laptops/useCartLaptops";
+import Row from "./Row";
+import Button from "./Button";
 
 const StyledSearch = styled.div`
   background-color: var(--color-secondary);
@@ -10,7 +12,7 @@ const StyledSearch = styled.div`
   border-bottom: 1px solid var(--color-grey-100);
 
   display: flex;
-  gap: 2.4rem;
+  gap: 2.3rem;
   align-items: center;
   justify-content: flex-end;
 `;

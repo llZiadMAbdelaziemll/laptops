@@ -9,6 +9,8 @@ import { useAddToCart } from "../features/laptops/useAddToCart";
 import { useDeleteCartLaptop } from "../features/laptops/useDeleteCartLaptop";
 import { useLaptops } from "../features/laptops/useLaptops";
 import { useFavorites } from "../features/laptops/useFavorites";
+import { useNavigate } from "react-router-dom/dist";
+import Spinner from "./Spinner";
 
 const ShowData = keyframes`
 50% {
@@ -69,6 +71,7 @@ const StyledCard = styled.div`
   width: 30%;
   height: 300px;
   text-align: center;
+
   &:hover {
     animation: ${RemoveOverflow} 2s forwards;
     ${CardData} {
@@ -89,6 +92,7 @@ const Img = styled.img`
   height: 200px;
   border-radius: 1.5rem;
   text-align: center;
+  cursor: pointer;
 `;
 
 const CardDescription = styled.span`
@@ -106,10 +110,11 @@ const CardH2 = styled.h2`
 `;
 
 const Card = ({ productMode, laptop, lapIndex }) => {
+  const navigate = useNavigate();
   const { isCreating, addFavoriteLaptop } = useAddFavorite();
   const { isCreating: isCreating2, addCartLaptop } = useAddToCart();
   const { isDeleting, deleteCartLaptop } = useDeleteCartLaptop();
-  const { laptops, isLoading } = useLaptops();
+
   const { laptops: favorites, isLoading: isLoading2 } = useFavorites();
 
   const { id } = laptop;
@@ -123,9 +128,16 @@ const Card = ({ productMode, laptop, lapIndex }) => {
   function addToCart() {
     addCartLaptop({ ...laptop });
   }
+  if (isCreating || isCreating2 || isDeleting || isLoading2) return <Spinner />;
   return (
     <StyledCard>
-      <Img src={laptop?.image} alt="image" />
+      <Img
+        src={laptop?.image}
+        onClick={
+          productMode === "home" ? () => navigate(`/home/${laptop?.id}`) : null
+        }
+        alt="image"
+      />
 
       <CardData>
         <CardH2>{laptop?.name}</CardH2>

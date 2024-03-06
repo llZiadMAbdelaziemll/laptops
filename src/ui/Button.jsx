@@ -16,14 +16,14 @@ const sizes = {
     text-align: center;
   `,
   medium: css`
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     padding: 1.2rem 1.6rem;
-    font-weight: 500;
+    font-weight: 600;
   `,
   large: css`
     font-size: 1.6rem;
     padding: 1.2rem 2.4rem;
-    font-weight: 500;
+    font-weight: 600;
   `,
 };
 const variations = {

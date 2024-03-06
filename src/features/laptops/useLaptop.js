@@ -3,15 +3,15 @@ import { useParams } from "react-router-dom";
 import { getLaptop } from "../../services/apiLaptops";
 
 export function useLaptop() {
-  const { LaptopId } = useParams();
+  const { id } = useParams();
 
   const {
     isLoading,
     data: laptop,
     error,
   } = useQuery({
-    queryKey: ["laptop", LaptopId],
-    queryFn: () => getLaptop(LaptopId),
+    queryKey: ["laptop", id],
+    queryFn: () => getLaptop(id),
     retry: false,
   });
 
