@@ -13,7 +13,8 @@ const Form = styled.form`
       align-items: center;
       gap: 0.6rem;
       /* Box */
-      background-color: var(--color-primary);
+      // background-color: var(--color-primary);
+      background-color: #171b1c;
       // border: 1px solid var(--color-grey-100);
       // border-radius: var(--border-radius-md);
     `}
