@@ -13,7 +13,7 @@ const SignupLayout = styled.main`
   // background-color: var(--color-grey-50);
 `;
 const SignupFormLayout = styled.div`
-  background-color: var(--color-primary);
+  background-color: #171b1c;
   min-height: 100vh;
   width: 100%;
   display: flex;
