@@ -7,18 +7,18 @@ import styled, { css } from "styled-components";
 
 const Heading = styled.h1`
   ${(props) =>
-    props.type === "account" &&
-    css`
-      background-color: var(--color-secondary);
-      color: var(--color-primary);
-    `}
-
-  ${(props) =>
     props.type === "updates" &&
     css`
       background-color: var(--color-secondary);
       color: var(--color-primary);
     `}
+  ${(props) =>
+    props.type === "account" &&
+    css`
+      background-color: var(--color-primary);
+      color: var(--color-secondary);
+    `}
+  
   ${(props) =>
     props.as === "h1" &&
     css`
