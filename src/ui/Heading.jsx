@@ -9,12 +9,16 @@ const Heading = styled.h1`
   ${(props) =>
     props.type === "updates" &&
     css`
+      padding-top: 10px;
+      padding-bottom: 10px;
       background-color: var(--color-secondary);
       color: var(--color-primary);
     `}
   ${(props) =>
     props.type === "account" &&
     css`
+      padding-top: 20px;
+      padding-bottom: 20px;
       background-color: var(--color-primary);
       color: var(--color-secondary);
     `}

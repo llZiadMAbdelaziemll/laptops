@@ -6,6 +6,7 @@ import { useProductMode } from "../context/ProductsMode";
 
 const StyledSection = styled.div`
   background-color: var(--color-primary);
+  min-height: 80.6vh;
 `;
 const ServicesContainer = styled.div`
   max-width: 1300px;
