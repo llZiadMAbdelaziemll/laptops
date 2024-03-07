@@ -11,12 +11,16 @@ function Account() {
       </Heading>
 
       <Row>
-        <Heading as="h3">Update user data</Heading>
+        <Heading as="h3" type="updates">
+          Update user data
+        </Heading>
         <UpdateUserDataForm />
       </Row>
 
       <Row>
-        <Heading as="h3">Update password</Heading>
+        <Heading as="h3" type="updates">
+          Update password
+        </Heading>
         <UpdatePasswordForm />
       </Row>
     </>

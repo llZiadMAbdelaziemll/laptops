@@ -9,6 +9,13 @@ const Heading = styled.h1`
   ${(props) =>
     props.type === "account" &&
     css`
+      background-color: var(--color-Primary);
+      color: var(--color-Secondary);
+    `}
+
+  ${(props) =>
+    props.type === "updates" &&
+    css`
       background-color: var(--color-secondary);
       color: var(--color-primary);
     `}
