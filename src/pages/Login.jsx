@@ -14,7 +14,7 @@ const LoginLayout = styled.main`
 `;
 
 const LoginFormLayout = styled.div`
-  background-color: #171b1c;
+  background-color: var(--color-primary);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -30,6 +30,7 @@ const LogoLayout = styled.div`
   background: url("login.jpg") no-repeat;
   background-size: cover;
   padding-top: 8rem;
+  // background-color: var(--color-grey-50);
 `;
 
 function Login() {
